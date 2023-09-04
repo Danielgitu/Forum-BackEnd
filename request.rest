@@ -1,0 +1,94 @@
+GET http://localhost:4000/api/users/all
+
+###
+
+POST http://localhost:4000/api/users/login
+Content-Type: application/json
+
+{
+    "email":"joshE@gmail.com",
+    "password":"098h46732"
+}
+###
+
+
+get http://localhost:4000/api/users/id?id=2
+
+
+
+###
+
+GET http://localhost:000/api/users/
+x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjkyNjM2Nzk3LCJleHAiOjE2OTI2NDAzOTd9.fTtm9rRnlIF0duzSvFhKM4ueNBLUAqJu28bJWja8oNI
+
+###
+
+POST http://localhost:4000/api/users/
+Content-Type: application/json
+
+{
+  "firstName": "Josh",
+  "lastName": "Alex",
+  "userName": "Josh",
+  "email": "josh@gmail.com",
+  "password": "12345678"
+}
+
+###
+
+POST http://localhost:4000/api/users/id
+Content-Type: application/json
+
+{
+  "id": "1"
+}
+
+###
+
+POST http://localhost:4000/api/question/add
+Content-Type: application/json
+
+{
+  "question": "p tag",
+  "question_description": "What is p tag",
+  "question_code_block": "....",
+  "tags": "<p></p>",
+  "post_id": "12345678",
+  "user_id": "1"
+}
+
+
+###
+
+GET http://localhost:4000/api/question/all
+
+
+###
+
+POST http://localhost:4000/api/question/qid
+Content-Type: application/json
+
+{
+  "qid": "1"
+}
+
+
+###
+
+POST http://localhost:4000/api/answer/add
+Content-Type: application/json
+
+{
+  "answer": "A JSON Web Token, popularly known as JWT, is an open standard that defines a compact way for securely sharing information between two parties: a client and a server.",
+  "answer_code_block":"...",
+  "user_id":"1",
+  "question_id":"2"
+}
+###
+
+POST http://localhost:4000/api/answer/qid
+Content-Type: application/json
+
+{
+  "qid": "2"
+}
